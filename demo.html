@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Floating-Fixed with jQuery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<div id="demo-container">
+	<header>
+		<h1>Floating-Fixed with jQuery</h1>
+		<strong>this is header</strong>
+	</header>
+	<section id="contents">
+		<div class="dummy-area">
+			<div class="dummy-box"><span></span></div>
+			<div class="dummy-box"><span></span></div>
+			<div class="dummy-box"><span></span></div>
+			<div class="dummy-box"><span></span></div>
+			<div class="dummy-box"><span></span></div>
+			<div class="dummy-box double"><span></span></div>
+			<div class="dummy-box triple"><span></span></div>
+			<div class="dummy-box double"><span></span></div>
+			<div class="dummy-box triple"><span></span></div>
+			<div class="dummy-box wide"><span></span></div>
+			<div class="dummy-box wide"><span></span></div>
+			<div class="dummy-box"><span></span></div>
+			<div class="dummy-box"><span></span></div>
+			<div class="dummy-box"><span></span></div>
+			<div class="dummy-box"><span></span></div>
+			<div class="dummy-box"><span></span></div>
+		</div>
+	</section>
+	<aside id="floating-A">
+		<strong>#floating-A</strong>
+	</aside>
+	<aside id="floating-B">
+		<strong>#floating-B</strong>
+	</aside>
+	<footer>
+		<strong>this is footer</strong>
+	</footer>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="floatingFixed.js"></script>
+<script>
+
+$("#floating-A").fixedFloating({
+	floatingMargin : "20px",
+	fixedDirection : "LT",
+	limitTop : 200,
+	stickyCenterAlign : true,
+	centerElement : "#contents"	
+});
+
+$("#floating-B").fixedFloating({
+	floatingMargin : "20px",
+	fixedDirection : "RB",
+	limitBottom : 150,
+	stickyCenterAlign : true,
+	centerElement : "#contents"	
+});
+
+</script>
+
+</body>
+</html>
